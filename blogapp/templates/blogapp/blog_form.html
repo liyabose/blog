@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add / Edit Blog</title>
+</head>
+<body>
+
+<h1>Add / Edit Blog</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+
+<br>
+<a href="{% url 'blog_list' %}">Back to Blog List</a>
+
+</body>
+</html>

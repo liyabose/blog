@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Detail</title>
+</head>
+<body>
+
+<h1>{{ post.title }}</h1>
+<p><strong>Author:</strong> {{ post.author }}</p>
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" width="300">
+{% endif %}
+
+<p>{{ post.content }}</p>
+
+<p><strong>Created:</strong> {{ post.created_date }}</p>
+<p><strong>Updated:</strong> {{ post.updated_date }}</p>
+
+<a href="{% url 'blog_list' %}">Back</a>
+
+</body>
+</html>
